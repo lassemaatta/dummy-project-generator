@@ -1,0 +1,32 @@
+(ns {{ns-name}}
+  (:require [clojure.spec.alpha :as s]))
+
+(defn foobar
+  [a b c]
+  (str a b c))
+
+(s/def ::a int?)
+(s/def ::b string?)
+(s/def ::c any?)
+(s/def ::d int?)
+(s/def ::e string?)
+(s/def ::f (s/keys :req [::a ::b]))
+(s/def ::g int?)
+(s/def ::h double?)
+(s/def ::i string?)
+(s/def ::j (s/keys :req-un [::d ::h]))
+(s/def ::k any?)
+(s/def ::l string?)
+(s/def ::m (s/nilable ::k))
+(s/def ::n string?)
+(s/def ::o any?)
+(s/def ::p int?)
+(s/def ::q #{::d ::e})
+(s/def ::r any?)
+(s/def ::s string?)
+(s/def ::t any?)
+(s/def ::u int?)
+(s/def ::v any?)
+(s/def ::x keyword?)
+(s/def ::y any?)
+(s/def ::z int?)
